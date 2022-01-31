@@ -63,6 +63,8 @@ local void ReadParametersCmdline(void)
     cmd.kmax = GetdParam("kmax");
     cmd.Nk = GetiParam("Nk");
 //
+    cmd.kin= GetdParam("kin");
+//
     cmd.options = GetParam("options");
 }
 
@@ -95,7 +97,10 @@ local void startrun_ParamStat(void)
         cmd.kmax = GetdParam("kmax");
     if (GetParamStat("Nk") & ARGPARAM)
         cmd.Nk = GetiParam("Nk");
-    
+
+    if (GetParamStat("kin") & ARGPARAM)
+        cmd.kin = GetdParam("kin");
+
     if (GetParamStat("options") & ARGPARAM)
         cmd.options = GetParam("options");
 }
@@ -114,6 +119,8 @@ local void CheckParameters(void)
     if (cmd.Nk < 0)
         error("CheckParameters: absurd value for Nk\n");
 //
+    if (cmd.kin < 0.0)
+        error("CheckParameters: absurd value for kin\n");
 }
 
 local void ReadParameterFile(char *fname)
@@ -140,6 +147,8 @@ local void ReadParameterFile(char *fname)
     RPName(cmd.kmin,"kmin");
     RPName(cmd.kmax,"kmax");
     IPName(cmd.Nk,"Nk");
+//
+    RPName(cmd.kin,"kin");
 //
     SPName(cmd.options,"options",100);
 //
@@ -237,6 +246,8 @@ local void PrintParameterFile(char *fname)
         fprintf(fdout,FMTR,"kmin",cmd.kmin);
         fprintf(fdout,FMTR,"kmax",cmd.kmax);
         fprintf(fdout,FMTI,"Nk",cmd.Nk);
+//
+        fprintf(fdout,FMTR,"kin",cmd.kin);
 //
         fprintf(fdout,FMTT,"options",cmd.options);
 //

@@ -63,6 +63,8 @@ typedef struct {
     real kmax;
     int Nk;
 //
+    real kin;
+//
     string options;
 //
     string paramfile;

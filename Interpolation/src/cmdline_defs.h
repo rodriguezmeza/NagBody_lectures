@@ -18,6 +18,8 @@ string defv[] = {  ";"HEAD1": " HEAD2 "\n\t " HEAD3,
     "kmax=100",                     ";kmax to compute the power spectrum",
     "Nk=200",                       ";Total number of k in the power spectrum",":nk",
 //
+    "kin=1.0",                     ";k to compute an interpolated value of the power spectrum",
+//
     "options=",                     ";Various control options", ":opt",
 //
     "Version=1.0.0",                ";Mario A. Rodríguez-Meza/Alejandro Aviles 2018",

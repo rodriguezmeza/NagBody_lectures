@@ -10,6 +10,8 @@ local void PSLTable(void);
 
 void MainLoop(void)
 {
+    real k, PSLB;
+    
     if (!strnull(cmd.fnamePS)) {
         sprintf(gd.fnamePSPath,"Input/%s",cmd.fnamePS);
         fprintf(gd.outlog,"PS file Path and file name: %s\n",gd.fnamePSPath);
@@ -17,6 +19,10 @@ void MainLoop(void)
         InputPSTable();
         PSLTable();
     }
+    
+    k = cmd.kin;
+    PSLB = psInterpolation_nr(k, kPS, pPS, nPSLT);
+    fprintf(stdout,"\n\n kin, PS :: %g %g\n\n",k,PSLB);
 }
 
 

@@ -9,6 +9,7 @@ fnamePS                            psLCDM.in
 kmin                               0.001
 kmax                               100
 Nk                                 200
+kin                                0.01
 options                            
 
 
