@@ -43,7 +43,7 @@
 #include "./general_libs/vectmath.h"
 #include "./general_libs/getparam.h"
 #include "./general_libs/machines.h"
-#include "./general_libs/io/inout.h"
+#include "./general_libs/inout.h"
 // #include <strings.h>							// For unix
 #include "./general_libs/strings.h"	// For Visual c
 #else
