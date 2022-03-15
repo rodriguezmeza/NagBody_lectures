@@ -1,4 +1,4 @@
 # NagBody_lectures
-Lectures of Numerical Algorithms for N-body dynamics
+Lectures on Numerical Algorithms for General Body dynamics (NagBody)
 
 git clone https://github.com/rodriguezmeza/NagBody_lectures.git
