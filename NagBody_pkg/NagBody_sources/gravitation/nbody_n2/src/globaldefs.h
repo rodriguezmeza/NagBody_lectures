@@ -37,15 +37,15 @@
 #include <sys/stat.h>
 
 #ifndef NOGNU
-#include "../../../General_libs/general/stdinc.h"
-#include "../../../General_libs/math/mathfns.h"
-#include "../../../General_libs/math/vectdefs.h"
-#include "../../../General_libs/math/vectmath.h"
-#include "../../../General_libs/general/getparam.h"
-#include "../../../General_libs/general/machines.h"
-#include "../../../General_libs/io/inout.h"
+#include "./general_libs/stdinc.h"
+#include "./general_libs/mathfns.h"
+#include "./general_libs/vectdefs.h"
+#include "./general_libs/vectmath.h"
+#include "./general_libs/getparam.h"
+#include "./general_libs/machines.h"
+#include "./general_libs/io/inout.h"
 // #include <strings.h>							// For unix
-#include "../../../General_libs/general/strings.h"	// For Visual c
+#include "./general_libs/strings.h"	// For Visual c
 #else
 #include "stdinc.h"
 #include "mathfns.h"
