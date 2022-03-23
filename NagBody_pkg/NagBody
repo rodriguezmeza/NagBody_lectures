@@ -3944,7 +3944,7 @@ packing_lmgr:
 # ==================================================================
 # Making additional directories:
 
-INSTALLDIRS = bin man zip man/man1 local
+INSTALLDIRS = bin man zip tests man/man1 local
 
 install_dirs:
 	-@for i in $(INSTALLDIRS) ; do \
