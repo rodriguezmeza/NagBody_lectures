@@ -1,0 +1,93 @@
+# NagBody install file - md_ic_model code
+# Copyright (c) 2006-2012  M.A. Rodriguez-Meza, Mexico, D.F.
+
+#include ../../../NagBody_dir_structure
+PARENT_DIR = ../../../../
+PARENT_DIR_ONE = $(PARENT_DIR)../
+NAGBODY_ROOT_DIR = NagBody_pkg
+MD_IC_MODEL_DIR = $(NAGBODY_ROOT_DIR)/NagBody_sources/Cmplxfluids/md_ic_model
+NAGBODY_GENERAL_LIBS_DIR = $(NAGBODY_ROOT_DIR)/NagBody_sources/General_libs
+NAGBODY_NEMO_DIR = $(NAGBODY_ROOT_DIR)/NagBody_sources/General_libs/nemo
+INSTALL_PATH = $(PARENT_DIR_ONE)$(NAGBODY_ROOT_DIR)
+
+# ==================================================================
+# Install md_ic_model binary
+
+install:
+	@echo " "
+	@echo "Creating md_ic_model binary..."
+	(cd src; make; cp md_ic_model $(INSTALL_PATH)/bin/.)
+
+# ==================================================================
+# Install md_ic_model man page
+
+install_man:
+	@echo " "
+	@echo "Copying md_ic_model man page..."
+	(cd man; cp md_ic_model.m $(INSTALL_PATH)/man/man1/md_ic_model.1)
+
+# ==================================================================
+# Clean up md_ic_model source directory
+
+clean:
+	@echo " "
+	@echo "Cleaning md_ic_model source dir, binary and man page files..."
+	(cd src; $(MAKE) clean; \
+	rm -f $(INSTALL_PATH)/bin/md_ic_model \
+	rm -f $(INSTALL_PATH)/man/man1/md_ic_model.1)
+
+clean_dir:
+	@echo " "
+	@echo "Cleaning md_ic_model source dir..."
+	(cd src; $(MAKE) clean)
+
+# ==================================================================
+# Archive all source directories.  
+#
+# If errors about missing files occur, 
+# use `make -f NagBody packing_sources SHELL=/bin/csh'
+
+packing_sources:
+	@echo " "
+	@echo "Packing md_ic_model sources..."
+	@echo " "
+	(cd $(PARENT_DIR); tar cvf md_ic_model.tar \
+		$(MD_IC_MODEL_DIR)/src/{Makefile,*.h,*.c} \
+		$(MD_IC_MODEL_DIR)/man \
+		$(NAGBODY_ROOT_DIR)/NagBody \
+		$(NAGBODY_ROOT_DIR)/INSTALL \
+		$(NAGBODY_ROOT_DIR)/env_config/{nagbodyrc,profilerc} \
+		$(MD_IC_MODEL_DIR)/NagBody \
+		$(NAGBODY_ROOT_DIR)/Makefiles/NagBody_md_blj_n2 \
+		$(NAGBODY_ROOT_DIR)/Machines \
+		$(NAGBODY_ROOT_DIR)/NagBody_Tests/Cmplxfluids/md_ic_model/{gdr.exp,readme} \
+		$(NAGBODY_ROOT_DIR)/Readmes/Cmplxfluids/Readme-Install_md_ic_model \
+		$(NAGBODY_GENERAL_LIBS_DIR)/NagBody/{nagbody.c,nagbody_tree.c} \
+		$(NAGBODY_GENERAL_LIBS_DIR)/NagBody/nagbody_io.c \
+		$(NAGBODY_GENERAL_LIBS_DIR)/general/{clib.c,getparam.c} \
+		$(NAGBODY_GENERAL_LIBS_DIR)/io/{inout.c,inout.h} \
+		$(NAGBODY_GENERAL_LIBS_DIR)/math/{mathfns.c,mathutil.c,numrec.c} \
+		$(NAGBODY_GENERAL_LIBS_DIR)/general/lic.c \
+		$(NAGBODY_GENERAL_LIBS_DIR)/NagBody/{nagbody.h,nagbody_struct.h,nagbody_proto.h} \
+		$(NAGBODY_GENERAL_LIBS_DIR)/general/{getparam.h,machines.h} \
+		$(NAGBODY_GENERAL_LIBS_DIR)/math/{mathfns.h,mathutil.h,numrec.h} \
+		$(NAGBODY_GENERAL_LIBS_DIR)/general/switchs.h \
+		$(NAGBODY_GENERAL_LIBS_DIR)/general/{precision.h,stdinc.h,strings.h} \
+		$(NAGBODY_GENERAL_LIBS_DIR)/math/vectdefs.h \
+		$(NAGBODY_GENERAL_LIBS_DIR)/general/{constant.h,lic.h} \
+		$(NAGBODY_GENERAL_LIBS_DIR)/physics/physconstants.h \
+		$(NAGBODY_GENERAL_LIBS_DIR)/math/vectmath.h \
+		$(NAGBODY_NEMO_DIR)/include/{stdinc.h,strlib.h,filestruct.h,filefn.h,getparam.h} \
+		$(NAGBODY_NEMO_DIR)/include/{extstring.h,history.h,version.h,options.h,mathfns.h} \
+		$(NAGBODY_NEMO_DIR)/lib/{maxsizes.h,config.h} \
+		$(NAGBODY_NEMO_DIR)/src/kernel/io/filesecret.h \
+		$(NAGBODY_NEMO_DIR)/src/kernel/misc/gipsyc.h \
+		$(NAGBODY_NEMO_DIR)/src/tools/unproto/stdarg.h \
+		$(NAGBODY_NEMO_DIR)/src/kernel/io/{filesecret.c,extstring.c,history.c} \
+		$(NAGBODY_NEMO_DIR)/src/kernel/io/{convert.c,dprintf.c,stropen.c,getparam.c,outdefv.c} \
+		$(NAGBODY_NEMO_DIR)/src/kernel/cores/{bswap.c,error.c,strlib.c,date_id.c} \
+		$(NAGBODY_NEMO_DIR)/src/kernel/cores/{file_size.c,filefn.c,burststring.c} \
+		$(NAGBODY_NEMO_DIR)/src/kernel/misc/{nemoinp.c,herinp.c,setfblank.c} \
+		$(NAGBODY_NEMO_DIR)/include/snapshot/{snapshot.h,body.h,put_snap.c,put_snap-old.c}; \
+	 	gzip md_ic_model.tar; mv md_ic_model.tar.gz $(NAGBODY_ROOT_DIR)/zip/.)
+
