@@ -24,7 +24,7 @@ install:
 install_man:
 	@echo " "
 	@echo "Copying md_ic_model man page..."
-	(cd man; cp md_ic_model.m $(INSTALL_PATH)/man/man1/md_ic_model.1)
+	(cd doc; cp md_ic_model.m $(INSTALL_PATH)/man/man1/md_ic_model.1)
 
 # ==================================================================
 # Clean up md_ic_model source directory
