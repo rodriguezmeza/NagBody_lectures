@@ -23,12 +23,12 @@
 	and he disclaims all liability from any consequences arising from their use.
 ==============================================================================*/
 
-#include "../../../General_libs/general/stdinc.h"
-#include "../../../General_libs/math/mathfns.h"
-#include "../../../General_libs/math/vectmath.h"
-#include "../../../General_libs/general/getparam.h"
-#include "../../../General_libs/general/machines.h"
-#include "../../../General_libs/general/lic.h"
+#include "./general_libs/general/stdinc.h"
+#include "./general_libs/math/mathfns.h"
+#include "./general_libs/math/vectmath.h"
+#include "./general_libs/general/getparam.h"
+#include "./general_libs/general/machines.h"
+#include "./general_libs/general/lic.h"
 #include "globaldefs.h"
 #include "protodefs.h"
 #include <string.h>

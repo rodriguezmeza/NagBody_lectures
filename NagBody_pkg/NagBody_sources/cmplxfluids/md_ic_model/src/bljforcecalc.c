@@ -36,11 +36,11 @@ NOTA: El orden de los terminos en el calculo de la aceleracion de cada particula
 	a mostrarse diferente en los resultados del momento angular de los dos casos.
 */
 
-#include "../../../General_libs/general/stdinc.h"
-#include "../../../General_libs/math/mathfns.h"
-#include "../../../General_libs/math/vectmath.h"
-#include "../../../General_libs/math/mathutil.h"
-#include "../../../General_libs/NagBody/nagbody.h"
+#include "./general_libs/general/stdinc.h"
+#include "./general_libs/math/mathfns.h"
+#include "./general_libs/math/vectmath.h"
+#include "./general_libs/math/mathutil.h"
+#include "./general_libs/NagBody/nagbody.h"
 
 
 local void bljFactors(bodyptr, bodyptr, real *, real *, real *,

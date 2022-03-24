@@ -25,12 +25,12 @@
 	and he disclaims all liability from any consequences arising from their use.
 ==============================================================================*/
 
-#include "../../../General_libs/general/stdinc.h"
-#include "../../../General_libs/math/mathfns.h"
-#include "../../../General_libs/math/vectmath.h"
-#include "../../../General_libs/general/getparam.h"
-#include "../../../General_libs/io/inout.h"
-#include "../../../General_libs/general/constant.h"
+#include "./general_libs/general/stdinc.h"
+#include "./general_libs/math/mathfns.h"
+#include "./general_libs/math/vectmath.h"
+#include "./general_libs/general/getparam.h"
+#include "./general_libs/io/inout.h"
+#include "./general_libs/general/constant.h"
 #include "globaldefs.h"
 #include "protodefs.h"
 
@@ -38,7 +38,7 @@
 #include <sys/stat.h>
 
 /* #include <strings.h> */							// For unix
-#include "../../../General_libs/general/strings.h"		// For Visual C
+#include "./general_libs/general/strings.h"		// For Visual C
 
 local void EvalProps(void);
 local void AccumProps(int);
