@@ -32,10 +32,10 @@ LDFLAGS = $(LIBS)
 
 EXEC = xtrapzd
 
-OBJS	= xtrapzd.o trapzd.o \
+OBJS	= xtrapzd.o trapzd.o spline.o splint.o func3.o \
 	nrutil_nransi.o
 
-INCL	= nr_nransi.h nrutil_nransi.h
+INCL	= nr_nransi.h nrutil_nransi.h func3.h
 
 $(EXEC): $(OBJS) 
 	$(CC) $(OBJS) $(LIBS) -o $(EXEC)
