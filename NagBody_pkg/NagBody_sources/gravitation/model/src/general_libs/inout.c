@@ -28,8 +28,8 @@
 //#include <stdlib.h>
 //#include <math.h>
 
-#include "../general/stdinc.h"
-#include "../math/vectmath.h"
+#include "stdinc.h"
+#include "vectmath.h"
 #include "inout.h"
 #include <string.h>
 

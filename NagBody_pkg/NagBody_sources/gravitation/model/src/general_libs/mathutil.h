@@ -2,7 +2,7 @@
 #ifndef _mathutil_h
 #define _mathutil_h
 
-#include "../general/stdinc.h"
+#include "stdinc.h"
 #include "numrec.h"
 
 

@@ -1,8 +1,8 @@
 
-#include "../general/stdinc.h"
-#include "../math/mathfns.h"
-#include "../general/constant.h"
-#include "../math/mathutil.h"
+#include "stdinc.h"
+#include "mathfns.h"
+#include "constant.h"
+#include "mathutil.h"
 
 void Rotation3D(real vec[], real alpha, real beta, real gamma)
 {

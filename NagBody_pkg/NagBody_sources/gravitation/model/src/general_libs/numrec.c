@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include "../general/stdinc.h"
+#include "stdinc.h"
 #include "numrec.h"
 #include "mathfns.h"
 

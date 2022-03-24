@@ -3,7 +3,7 @@
 #define _mathfns_h
 
 #include <math.h>
-#include "../general/stdinc.h"
+#include "stdinc.h"
 #include "vectdefs.h"
 
 

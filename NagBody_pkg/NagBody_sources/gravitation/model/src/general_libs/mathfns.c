@@ -2,9 +2,9 @@
 // Incluido por haber puesto las funciones de bessel abajo ...
 //#include <math.h>
 
-#include "../general/machines.h"
+#include "machines.h"
 
-#include "../general/stdinc.h"
+#include "stdinc.h"
 #include "mathfns.h"
 
 #include "numrec.h"
