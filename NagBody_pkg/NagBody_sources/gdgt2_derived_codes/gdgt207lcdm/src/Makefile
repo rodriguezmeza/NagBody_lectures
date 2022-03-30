@@ -74,7 +74,7 @@ OPTIONS =  $(OPTIMIZE) $(OPT1) $(OPT2) $(OPT3) $(OPT4) $(OPT5) $(OPT6)\
 # elegir entre galaxy, gassphere, lcdm_gas o cluster ...
 
 
-H_PATH = ../../../General_libs/
+H_PATH = ./general_libs/
 #H_PATH = ../../../General_libs/
 
 OBJS   = main.o  run.o  predict.o startrun.o global.o  \
