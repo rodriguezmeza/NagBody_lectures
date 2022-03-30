@@ -1984,6 +1984,46 @@ clean_nagbody_gnu_gdgt207galaxy:
 
 
 # ==================================================================
+# galic code: [GALIC galaxy initial generator 
+#    (with some modifications: no comments, 
+#    structures like NagBody, command line parameters… )]
+# ABOVE NOT YET IMPLEMENTED
+
+MAKEGALIC = Makefiles/gdgt2_derived_codes/NagBody_galic
+
+install_galic:
+	$(MAKE) -f $(MAKEGALIC) install_galic
+
+clean_galic:
+	$(MAKE) -f $(MAKEGALIC) clean_galic
+
+clean_gdgt207galaxy_dir:
+	$(MAKE) -f $(MAKEGALIC) clean_galic_dir
+
+# LINES BELOW ARE NOT YET IMPLEMENTED. DO NOT USE THEM
+packing_galic:
+	$(MAKE) -f $(MAKEGALIC) packing_galic
+
+packing_gnu_gdgt207galaxy:
+	$(MAKE) -f $(MAKEGALIC) packing_gnu_galic
+
+packing_nagbody_gnu_galic:
+	$(MAKE) -f $(MAKEGALIC) packing_nagbody_gnu_galic
+
+install_gnu_dirs_galic:
+	$(MAKE) -f $(MAKEGALIC) install_gnu_dirs_galic
+
+install_nagbody_gnu_dirs_galic:
+	$(MAKE) -f $(MAKEGALIC) install_nagbody_gnu_dirs_galic
+
+clean_gnu_galic:
+	$(MAKE) -f $(MAKEGALIC) clean_gnu_galic
+
+clean_nagbody_gnu_galic:
+	$(MAKE) -f $(MAKEGALIC) clean_nagbody_gnu_galic
+
+
+# ==================================================================
 # gdgt207lcdm code: [Gadget-2.0.7 cosmo simulations 
 #    (with some modifications: no comments, 
 #    structures like NagBody, command line parameters… )]
