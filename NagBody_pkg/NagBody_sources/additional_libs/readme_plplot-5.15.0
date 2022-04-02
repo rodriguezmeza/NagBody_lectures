@@ -1,0 +1,48 @@
+INSTRUCCIONES DE INSTALACION DE PLPLOT
+
+(REFERIRSE A NagBody_pkg/Readmes/Additional_libs/Readme-Install_plplot)
+
+Vayamos al directorio plplot-5.15.0
+
+export CC="gcc -O2"
+export CXX="g++ -O2"
+export FC="gfortran -O2"
+
+mkdir build_dir 
+cd build_dir
+
+Instalamos sin fortran, qt, wxWidgets, Python, Java ...
+
+cmake -DCMAKE_INSTALL_PREFIX=$HOME/NagBody_pkg/local/plplot -DENABLE_DYNDRIVERS=OFF -DPLD_psttfc=OFF -DPLD_plmeta=OFF .. >& cmake.out
+
+make >& make.out
+make install >& make_install.out
+
+cd ..
+rm -fR build_dir
+
+Se mueve el directorio plplot a: $HOME/NagBody_pkg/local/plplot-5.15.0_gcc_gfortran_ver11
+
+se cambia al directorio NagBody_pkg/local y se hace la liga 
+
+ln -s plplot-5.15.0_gcc_gfortran_ver11 plplot
+
+Se incluyen las siguientes variables de ambiente en env_config/nagbodyrc:
+
+export PATH=${HOME}/local/plplot/bin:${PATH}
+export MANPATH=${HOME}/local/plplot/share/man:${MANPATH}
+export PKG_CONFIG_PATH=${HOME}/local/plplot/lib/pkgconfig:${PKG_CONFIG_PATH}
+export DYLD_LIBRARY_PATH=${HOME}/local/plplot/lib:${DYLD_LIBRARY_PATH}
+export DYLD_LIBRARY_PATH=${HOME}/local/plplot/lib/plplot5.15.0/driversd:${DYLD_LIBRARY_PATH}
+
+Para hacer pruebas ...
+
+cd $HOME/NagBody_pkg/local/plplot/share/plplot5.15.0/examples
+make test_interactive
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LINUX UBUNTU %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Primer se instala cmake con:
+
+sudo apt-get install cmake
+
