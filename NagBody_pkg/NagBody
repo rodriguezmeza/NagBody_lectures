@@ -3629,7 +3629,7 @@ clean_nagbody_gnu_sphzenon_sph:
 # ==================================================================
 # nplot2d code:
 
-MAKENPLOT2D = Makefiles/NagBody_PLPlots/NagBody_nplot2d
+MAKENPLOT2D = Makefiles/nagbody_plplots/NagBody_nplot2d
 
 install_nplot2d:
 	$(MAKE) -f $(MAKENPLOT2D) install_nplot2d
