@@ -12,10 +12,10 @@ include $(MACHINES_DIR)machine.inc
 #OPT1    =  -DOPTIONNAME     
 #OPT2    =  -DOPTIONNAME     
 #OPT7    =  -I /opt/local/include/plplot/
-OPT7    =  -I $(HOME)/NagBody_lectures/NagBody_pkg/local/include/plplot/
+OPT7    =  -I $(HOME)/NagBody_lectures/NagBody_pkg/local/plplot/include/plplot/
 #
 #PKG_CONFIG_ENV = PKG_CONFIG_PATH=/opt/local/lib/pkgconfig
-PKG_CONFIG_ENV = PKG_CONFIG_PATH=$(HOME)/NagBody_lectures/NagBody_pkg/local/lib/pkgconfig
+PKG_CONFIG_ENV = PKG_CONFIG_PATH=$(HOME)/NagBody_lectures/NagBody_pkg/local/plplot/lib/pkgconfig
 LIB_TAG =
 RPATHCMD = 
 
